@@ -10,6 +10,7 @@ async function getData() {
       revalidate: 60
     }
   })
+  if (!res.ok) throw new Error("Enable to fetch posts!")
   return res.json()
 }
 const Blog = async () => {
